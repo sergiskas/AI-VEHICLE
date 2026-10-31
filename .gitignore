@@ -1,0 +1,53 @@
+# Environnement virtuel
+venv/
+env/
+.venv/
+
+# Fichiers Python temporaires
+__pycache__/
+*.py[cod]
+*.log
+
+# Fichiers temporaires
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Images importées et résultats générés
+uploads/*
+results/*
+
+# Historique local
+history.json
+
+# Modèles entraînés volumineux
+*.pt
+*.pth
+
+# Configuration locale
+.env
+
+# Datasets volumineux
+ambulance/
+cars/
+dataset/
+dataset_ancien/
+training/
+verification/
+
+# Résultats et fichiers générés
+runs/
+videos/
+test_images/
+
+# Environnement virtuel
+venv/
+.venv/
+
+# Modèles YOLO
+*.pt
+*.pth
+
+# Images de test et résultats générés
+static/uploads/*
+static/results/*

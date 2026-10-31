@@ -1,0 +1,6 @@
+path: .  # Racine du projet (ou chemin vers votre dossier dataset)
+train: dataset/images/train  # Dossier des images d'entraînement fusionnées
+val: dataset/images/val      # Dossier des images de validation fusionnées
+
+nc: 3                        # Nombre total de classes (ambulance, police, car)
+names: ['ambulance', 'police', 'car']  # Ordre strict : 0=ambulance, 1=police, 2=ca

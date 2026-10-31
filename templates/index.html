@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Vehicle - Reconnaissance intelligente</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         EN-TÊTE
+    ====================================================== -->
+
+    <header class="header">
+
+        <div class="header-content">
+
+            <div class="logo">
+
+                <div class="logo-icon">
+                    AI
+                </div>
+
+                <div>
+                    <div class="logo-text">
+                        AI VEHICLE
+                    </div>
+
+                    <div class="logo-subtitle">
+                        Système intelligent de reconnaissance
+                    </div>
+                </div>
+
+            </div>
+
+
+            <nav class="navigation">
+
+                <a href="{{ url_for('index') }}">
+                    Détection
+                </a>
+
+                <a href="{{ url_for('historique') }}">
+                    Historique
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         CONTENU PRINCIPAL
+    ====================================================== -->
+
+    <main class="container">
+
+        <!-- Présentation -->
+
+        <section class="hero">
+
+            <h1>
+                Reconnaissance intelligente des véhicules
+            </h1>
+
+            <p>
+                Analysez automatiquement les images provenant
+                des caméras de surveillance routière afin
+                d'identifier les véhicules de police,
+                les ambulances médicales et les véhicules ordinaires.
+            </p>
+
+        </section>
+
+
+        <!-- =================================================
+             CARTE D'IMPORTATION
+        ================================================== -->
+
+        <section class="card upload-card">
+
+            <form
+                action="{{ url_for('analyser') }}"
+                method="POST"
+                enctype="multipart/form-data"
+            >
+
+                <div class="upload-box">
+
+                    <div class="upload-icon">
+                        ↑
+                    </div>
+
+                    <h2>
+                        Importer une image
+                    </h2>
+
+                    <p>
+                        Sélectionnez une image contenant un véhicule
+                        à analyser par le système.
+                    </p>
+
+                    <input
+                        type="file"
+                        name="image"
+                        accept=".jpg,.jpeg,.png"
+                        required
+                    >
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="analyze-button"
+                >
+                    ANALYSER L'IMAGE
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- =================================================
+             INFORMATIONS DU SYSTÈME
+        ================================================== -->
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+
+                <div class="stat-label">
+                    TECHNOLOGIE
+                </div>
+
+                <div class="stat-value">
+                    YOLO
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-label">
+                    TRAITEMENT
+                </div>
+
+                <div class="stat-value">
+                    IA
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-label">
+                    CLASSES
+                </div>
+
+                <div class="stat-value">
+                    03
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         PIED DE PAGE
+    ====================================================== -->
+
+    <footer class="footer">
+
+        <p>
+            Système intelligent de reconnaissance des véhicules
+        </p>
+
+        <p>
+            Intelligence Artificielle • YOLO • OpenCV
+        </p>
+
+    </footer>
+
+</body>
+</html>
